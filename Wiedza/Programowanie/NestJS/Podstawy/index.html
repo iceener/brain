@@ -1,0 +1,96 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="Instalacja  Zainstalowanie CLI: npm i -g @nestjs/cli Utworzenie nowego projektu nest new [nazwa]  Struktura projektu Podstawową struktury kodu w NestJS są klasy (eng."><title>brain.overment.com</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=//icon.png><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Poppins:ital,wght@0,300;0,700;1,300;1,500;1,700&display=swap" rel=stylesheet><link href=/styles.2a6be161845267e1999e8984b97fd030.min.css rel=stylesheet><script src=/js/darkmode.46b07878b7f5d9e26ad7a3c40f8a0605.min.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!1})})</script><script>const BASE_URL="/",fetchData=Promise.all([fetch("/indices/linkIndex.43e6116bdc167d8827895a2986fa62bb.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("/indices/contentIndex.1b422412adbd379246887278055530b5.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n}))</script></head><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
+<script defer src=/js/search.bc849b857f2c1b822264d40635bb67b6.min.js></script><div class=singlePage><header><h1 id=page-title><a href=/><img class=logo src=https://overment.com/images/logo-icon.svg alt=logo> brain.overment.com</a></h1><svg tabindex="0" id="search-icon" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg><div class=spacer></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><p class=meta>Ostatnia aktualizacja: 26/04/2022</p><ul class=tags></ul><aside class=mainTOC><details open><summary>Spis treści</summary><nav id=TableOfContents><ol><li><a href=#instalacja>Instalacja</a></li><li><a href=#struktura-projektu>Struktura projektu</a></li><li><a href=#controllers>[[Controllers]]</a><ol><li><a href=#tworzenie-controllerów>Tworzenie controllerów</a></li></ol></li><li><a href=#services>[[Services]]</a><ol><li><a href=#tworzenie-serwisów>Tworzenie serwisów</a></li></ol></li><li><a href=#modules>[[Modules]]</a><ol><li><a href=#tworzenie-modułów>Tworzenie modułów</a></li></ol></li><li><a href=#data-transfer-objects>[[Data Transfer Objects]]</a><ol><li><a href=#tworzenie-dto>Tworzenie DTO</a></li></ol></li><li><a href=#validation>[[Validation]]</a></li></ol></nav></details></aside><h2 id=instalacja>Instalacja</h2><ol><li>Zainstalowanie CLI: <code>npm i -g @nestjs/cli</code></li><li>Utworzenie nowego projektu <code>nest new [nazwa]</code></li></ol><h2 id=struktura-projektu>Struktura projektu</h2><p>Podstawową struktury kodu w NestJS są klasy (eng. <a class="internal-link broken">classes</a>) oraz dekoratory (eng. <a class="internal-link broken">decorators</a>).</p><h2 id=controllers><a class="internal-link broken">Controllers</a></h2><p>Controllery to klasy, których zadaniem jest obsługa akcji poszczególnych ścieżek (<a class="internal-link broken">routing</a>) aplikacji. Przykładowo jeżeli użytkownik wejdzie na adres <code>https://brain.overment.com</code> to na pewnym etapie akcja controllera pobierze niezbędne dane i zwróci odpowiedź.</p><p>W NestJS controller można powiązać ze ścieżką, wykorzystując parametry przekazane do dekoratora Controllera oraz jego Akcji.</p><p>Powiązanie controllera ze ścieżką &lsquo;/users&rsquo;:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>@Controller(&#39;users&#39;)
+</span></span><span class=line><span class=cl>export class UsersController {}
+</span></span></code></pre></td></tr></table></div></div><p>Powiązanie akcji controllera ze ścieżką /users/:id. Dodatkowo ta akcja przyjmuje również parametr <code>id</code>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>export class UsersController {
+</span></span><span class=line><span class=cl>  **@Get(&#39;id&#39;)**
+</span></span><span class=line><span class=cl>  find(@Param(&#39;id&#39;) id: number) {
+</span></span><span class=line><span class=cl>  	return `User: ${id}`;
+</span></span><span class=line><span class=cl>  }
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><p>Akcje kontrolera mogą przyjmować również <code>request body</code>.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>export class UsersController {
+</span></span><span class=line><span class=cl>  @Post()
+</span></span><span class=line><span class=cl>  find(@Body() body) {
+</span></span><span class=line><span class=cl>  	return `User: ${body.id}`;
+</span></span><span class=line><span class=cl>  }
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><p>Akcje mogą przyjmować też parametry <code>query string</code></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>export class UsersController {
+</span></span><span class=line><span class=cl>  @Get()
+</span></span><span class=line><span class=cl>  find(@Query() query) {
+</span></span><span class=line><span class=cl>  	return `User: ${query.id}`;
+</span></span><span class=line><span class=cl>  }
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><p>Akcje mogą zwracać kod statusu</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>export class UsersController {
+</span></span><span class=line><span class=cl>  @Post()
+</span></span><span class=line><span class=cl>  @HttpCode(HttpStatus.OK)
+</span></span><span class=line><span class=cl>  find(@Body() body) {}
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><h3 id=tworzenie-controllerów>Tworzenie controllerów</h3><p>Z pomocą CLI: <code>nest g co</code> (lub <code>nest generate controller</code>) tworzymy plik controllera i spec.ts.</p><ul><li>flaga &ndash;no-spec umożliwia utworzenie controllera bez pliku spec.ts</li><li>podając w nazwie katalog, umieścisz go w podkatalogu</li><li>flaga &ndash;dry-run umożliwia przetestowanie polecenia</li></ul><h2 id=services><a class="internal-link broken">Services</a></h2><p>Serwisy umożliwiają rozdzielenie logiki naszej aplikacji na mniejsze części, ułatwiając jej organizację.</p><p>Przykład serwisu:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>@Injectable()
+</span></span><span class=line><span class=cl>export class UsersService {}
+</span></span></code></pre></td></tr></table></div></div><p>Dodawanie serwisu np. do controllera odbywa się w konstruktorze:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>@Controller()
+</span></span><span class=line><span class=cl>export class UsersController {
+</span></span><span class=line><span class=cl>  constructor(private readonly usersService: UsersService)
+</span></span><span class=line><span class=cl>  // private declares and initializes field
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><h3 id=tworzenie-serwisów>Tworzenie serwisów</h3><p>Z pomocą CLI <code>nest g s</code> (lub <code>nest generate service</code>) tworzymy plik serwisu i spec.ts</p><p>Serwis to zwykła klasa z dektoratorem @Injectable()</p><p>W Nest.js każdy serwis to <a class="internal-link broken">Provider</a>. Oznacza to, że serwisy mogą przyjmować zależności np. w postaci innych serwisów.</p><h2 id=modules><a class="internal-link broken">Modules</a></h2><p>W NestJS moduły pozwalają na organizowanie logiki biznesowej powiązanych ze sobą fragmentów (np. AuthModule)</p><p>Dekorator @Module przyjmuje obiekt zawierający informację o:</p><ul><li>controllerach (z których korzysta dany moduł)</li><li>exportowanych providerach, które mają być dostępne tam, gdzie importowany jest moduł</li><li>importowanych modułach</li><li>wykorzystywanych providerach, które będą dostępne tylko w tym module</li></ul><h3 id=tworzenie-modułów>Tworzenie modułów</h3><p>Z pomocą CLI <code>nest g module</code> tworzymy nowy moduł aplikacji oraz aktualizujemy główny moduł aplikacji (src/app.module.ts)</p><h2 id=data-transfer-objects><a class="internal-link broken">Data Transfer Objects</a></h2><p>DTO pozwalają na określenie interfejsów dla danych wejściowych i wyjściowych w aplikacji. Np. z ich pomocą możemy określić kształt wymaganego obiektu.</p><p>DTO to proste obiekty, których rolą jest po prostu określenie struktury danych. Nie zawierają żadnej logiki biznesowej ani czegokolwiek, co wymaga testowania.</p><p>Przykład:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>export class CreateUserDto {
+</span></span><span class=line><span class=cl>  name: string;
+</span></span><span class=line><span class=cl>  brand: string;
+</span></span><span class=line><span class=cl>  flavors: string[];
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div><h3 id=tworzenie-dto>Tworzenie DTO</h3><p>Z pomocą CLI <code>nest g class users/dto/create-user.dto --no-spec</code>generujemy plik <code>create-user.dto.ts</code> eksportujący klasę <code>CreateUserDto</code></p><h2 id=validation><a class="internal-link broken">Validation</a></h2><ul><li>W pliku main.ts dodaj globalPipe: app.useGlobalPipes(new ValidationPipe())</li><li>Zainstaluj class-validator class-transformer</li></ul><p>import { IsString } from &lsquo;class-validator&rsquo;</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>export class CreateUserDto {
+</span></span><span class=line><span class=cl>  @IsString()
+</span></span><span class=line><span class=cl>  readonly name: string;
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>  @IsString({ roles })
+</span></span><span class=line><span class=cl>  readonly roles: string[];
+</span></span><span class=line><span class=cl>}
+</span></span></code></pre></td></tr></table></div></div></article><hr><div class=page-end><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li>No backlinks found</li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=/js/graph.27e8521c25c27c79dea35f434c486167.js></script>
+<script>drawGraph("/Wiedza/Programowanie/NestJS/Podstawy","",[{"/moc":"#4388cc"}],-1,!0,!1,!0)</script></div></div><script defer>(()=>{const e=document.querySelectorAll(".singlePage article a");e.forEach(e=>{const s=e.textContent,n=s.split("/"),t=n[n.length-1];t.indexOf("]]")>-1?e.textContent=t.slice(0,-2):e.textContent=t})})()</script><script src=/js/popover.e57188d2e4c06b0654e020b3a734bb62.min.js></script>
+<script>initPopover("")</script></div></body></html>
