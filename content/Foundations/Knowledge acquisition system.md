@@ -34,7 +34,7 @@ Sources are usually centered around people or projects. There are also people ar
 I don't measure it in any way, but learning is practically an integral part of my day. This means that I use practically every free moment to learn something new. At the same time, I also have space for total non-thinking, rest and silence, which I also see as a very important part of the process of acquiring knowledge.
 
 ## Detailed process
-Na [[Projects/Ahoy!]] I described the detailed process of how I learn (polish only):
+On [[Projects/Ahoy!]] I described the detailed process of how I learn (polish only):
 
 ![](https://space.overment.com/Screen-Shot-2022-05-02-17-34-46-wwzjR/Screen-Shot-2022-05-02-17-34-46.png)
 
